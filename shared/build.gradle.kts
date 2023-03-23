@@ -1,24 +1,48 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.chromaticnoise.multiplatform-swiftpackage-m1-support")
+}
+
+multiplatformSwiftPackage {
+    xcframeworkName("SharedKit")
+    swiftToolsVersion("5.3")
+    targetPlatforms {
+        iOS { v("13") }
+        watchOS { v("7") }
+    }
+    buildConfiguration { release() }
+    outputDirectory(File(projectDir, "shared"))
 }
 
 kotlin {
+    explicitApiWarning()
+
     android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
+        publishAllLibraryVariants()
+        publishLibraryVariantsGroupedByFlavor = true
     }
-    
+
+    val xcf = XCFramework("SharedKit")
+
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
+
+        watchosArm32(),
+        watchosArm64(),
+        watchosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "SharedKit"
+
+            isStatic = false
+            linkerOpts.add("-lsqlite3")
+
+            xcf.add(this)
         }
     }
 
@@ -48,6 +72,17 @@ kotlin {
             iosX64Test.dependsOn(this)
             iosArm64Test.dependsOn(this)
             iosSimulatorArm64Test.dependsOn(this)
+        }
+
+        val watchosArm32Main by getting
+        val watchosArm64Main by getting
+        val watchosSimulatorArm64Main by getting
+        val watchosMain by creating {
+            dependsOn(commonMain)
+
+            watchosArm32Main.dependsOn(this)
+            watchosArm64Main.dependsOn(this)
+            watchosSimulatorArm64Main.dependsOn(this)
         }
     }
 }

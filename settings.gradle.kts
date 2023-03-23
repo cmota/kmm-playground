@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "Playground"
 include(":androidApp")
 include(":shared")
+
+includeBuild("plugins/multiplatform-swiftpackage-m1_support")
