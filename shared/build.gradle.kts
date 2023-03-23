@@ -79,7 +79,6 @@ kotlin {
         val watchosSimulatorArm64Main by getting
         val watchosMain by creating {
             dependsOn(commonMain)
-
             watchosArm32Main.dependsOn(this)
             watchosArm64Main.dependsOn(this)
             watchosSimulatorArm64Main.dependsOn(this)
