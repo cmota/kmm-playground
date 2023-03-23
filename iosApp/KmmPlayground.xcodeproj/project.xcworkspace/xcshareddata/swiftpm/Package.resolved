@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "kmm-playground-pkg",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jfredsilva/kmm-playground-pkg.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bf0687e52fddf4b7fb8b1cd8f7819c557489b7e2"
+      }
+    }
+  ],
+  "version" : 2
+}
