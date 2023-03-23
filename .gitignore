@@ -16,3 +16,8 @@ sharedpackage
 .externalNativeBuild
 .cxx
 local.properties
+
+## User settings
+xcuserdata/
+xcshareddata/
+*.xcuserstate

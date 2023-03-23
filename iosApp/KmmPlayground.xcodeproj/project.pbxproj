@@ -11,7 +11,7 @@
 		B417ADAA29CC974800345CF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417ADA929CC974800345CF7 /* ContentView.swift */; };
 		B417ADAC29CC974900345CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417ADAB29CC974900345CF7 /* Assets.xcassets */; };
 		B417ADAF29CC974900345CF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B417ADAE29CC974900345CF7 /* Preview Assets.xcassets */; };
-		B417ADB729CC981F00345CF7 /* SharedKit in Frameworks */ = {isa = PBXBuildFile; productRef = B417ADB629CC981F00345CF7 /* SharedKit */; };
+		B41BA36929CCA49F007A7157 /* LibraryKit in Frameworks */ = {isa = PBXBuildFile; productRef = B41BA36829CCA49F007A7157 /* LibraryKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B417ADB729CC981F00345CF7 /* SharedKit in Frameworks */,
+				B41BA36929CCA49F007A7157 /* LibraryKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 			);
 			name = KmmPlayground;
 			packageProductDependencies = (
-				B417ADB629CC981F00345CF7 /* SharedKit */,
+				B41BA36829CCA49F007A7157 /* LibraryKit */,
 			);
 			productName = KmmPlayground;
 			productReference = B417ADA429CC974800345CF7 /* KmmPlayground.app */;
@@ -117,7 +117,7 @@
 			);
 			mainGroup = B417AD9B29CC974800345CF7;
 			packageReferences = (
-				B417ADB529CC981F00345CF7 /* XCRemoteSwiftPackageReference "kmm-playground-pkg" */,
+				B41BA36729CCA49F007A7157 /* XCRemoteSwiftPackageReference "LibraryKit" */,
 			);
 			productRefGroup = B417ADA529CC974800345CF7 /* Products */;
 			projectDirPath = "";
@@ -349,9 +349,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B417ADB529CC981F00345CF7 /* XCRemoteSwiftPackageReference "kmm-playground-pkg" */ = {
+		B41BA36729CCA49F007A7157 /* XCRemoteSwiftPackageReference "LibraryKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jfredsilva/kmm-playground-pkg.git";
+			repositoryURL = "https://github.com/jfredsilva/LibraryKit.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -360,10 +360,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B417ADB629CC981F00345CF7 /* SharedKit */ = {
+		B41BA36829CCA49F007A7157 /* LibraryKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B417ADB529CC981F00345CF7 /* XCRemoteSwiftPackageReference "kmm-playground-pkg" */;
-			productName = SharedKit;
+			package = B41BA36729CCA49F007A7157 /* XCRemoteSwiftPackageReference "LibraryKit" */;
+			productName = LibraryKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
-import LibraryKit
 
 struct ContentView: View {
     var body: some View {
-        LibraryView()
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Hello, world!")
+        }
+        .padding()
     }
 }
 
