@@ -8,6 +8,15 @@
         "branch" : "main",
         "revision" : "bf0687e52fddf4b7fb8b1cd8f7819c557489b7e2"
       }
+    },
+    {
+      "identity" : "librarykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jfredsilva/LibraryKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "af5c7f539c8895eb69ac1823161e1c09a3167a00"
+      }
     }
   ],
   "version" : 2
